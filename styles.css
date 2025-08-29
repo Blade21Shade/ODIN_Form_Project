@@ -1,14 +1,20 @@
 body {
     display: flex;
     margin: 0px;
+
+    --right-column-spacing: 80px;
+}
+
+/* General column formatting */
+#left-column, #right-column {
+    height: 100vh;
+    flex: auto;
 }
 
 /*Left Column*/
 #left-column {
     /* Flex and size stuff */
-    width: 30%;
-    height: 695px;
-    flex: 1;
+    width: 40%;
     
     display: flex;
     flex-direction: column;
@@ -47,3 +53,57 @@ body {
 }
 
 /*Right column*/
+#right-column {
+    /* Flex and size stuff */
+    width: 60%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /*Background*/
+    background-color: rgb(230, 230, 230);
+}
+
+#right-column p {
+    /*Spacing*/
+    
+    margin-left: var(--right-column-spacing);
+    margin-right: var(--right-column-spacing);
+
+    /*Font*/
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+
+/*Form*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    background-color: white;
+    padding: 10px;
+}
+
+.form-container-row {
+    display: flex;
+    gap: 30px;
+
+    margin-left: var(--right-column-spacing);
+}
+
+form > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:focus {
+    border: 2px solid rgb(32, 186, 238);
+    box-shadow: black 2px 2px 5px;
+}
