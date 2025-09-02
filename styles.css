@@ -85,6 +85,8 @@ form {
     
     background-color: white;
     padding: 10px;
+
+    box-shadow: gray 1px 1px 5px;
 }
 
 .form-container-row {
@@ -106,4 +108,21 @@ input:invalid {
 input:focus {
     border: 2px solid rgb(32, 186, 238);
     box-shadow: black 2px 2px 5px;
+}
+
+button {
+    padding: 10px;
+    margin-left: var(--right-column-spacing);
+    margin-top: 20px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    color: white;
+    background-color: black;
 }
